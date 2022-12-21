@@ -23,5 +23,5 @@ jobs:
     steps:
       - name: check the environment
         run: | 
-          echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
+          echo "choice is ${{ github.event.inputs.environment }}" / ${{ inputs.environment }}
           python RunScript.py
