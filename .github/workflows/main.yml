@@ -3,18 +3,12 @@ name: aws deployment process
 on:
   workflow_dispatch:
     inputs:
-      choice:
-        type: choice
-        description: Target platform for deployment
-        options:
-        - Development
-        - Production
       
       environment:
         type: environment
 
 env:
- PARAM: ${{ secrets.PARAM }}
+ PARAM: ${{ secrets.SAMPLE }}
 
 jobs:
   Deployment:
