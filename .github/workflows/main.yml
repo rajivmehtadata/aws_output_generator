@@ -1,0 +1,29 @@
+name: aws deployment process
+
+on:
+  workflow_dispatch:
+    inputs:
+      choice:
+        type: choice
+        description: Target platform for deployment
+        options:
+        - Development
+        - Production
+      
+      environment:
+        type: environment
+
+env:
+ PARAM: ${{ secrets.PARAM }}
+
+jobs:
+  Deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+#       - uses: actions/checkout@v3
+
+      - name: check the environment
+        run: | 
+          echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
+          python RunScript.py
