@@ -7,7 +7,7 @@ on:
         type: environment
 
 env:
- SAMPLE: ${{ secrets.SAMPLE }}
+ SAMPLE: ${{ env.SAMPLE }}
 
 jobs:
   Deployment:
