@@ -7,12 +7,13 @@ on:
         type: environment
 
 env:
- SAMPLE: ${{ env.SAMPLE }}
+ SAMPLE: ${{ secrets.SAMPLE }}
 
 jobs:
   Deployment:
     runs-on: ubuntu-latest
-
+    environment: 
+          name: prod    
     steps:
       - uses: actions/checkout@v3
       - name: check the environment
