@@ -1,3 +1,3 @@
 import os
 foo = ('yes' if os.getenv('SAMPLE') == "1" else 'no')
-print(f'{foo}')
+print(f"{foo} , {type(os.getenv('SAMPLE'))}")
