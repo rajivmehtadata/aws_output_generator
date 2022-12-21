@@ -21,8 +21,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-#       - uses: actions/checkout@v3
-
       - name: check the environment
         run: | 
           echo "choice is ${{ github.event.inputs.choice }}" / ${{ inputs.choice }}
