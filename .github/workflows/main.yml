@@ -3,12 +3,11 @@ name: aws deployment process
 on:
   workflow_dispatch:
     inputs:
-      
       environment:
         type: environment
 
 env:
- PARAM: ${{ secrets.SAMPLE }}
+ SAMPLE: ${{ secrets.SAMPLE }}
 
 jobs:
   Deployment:
