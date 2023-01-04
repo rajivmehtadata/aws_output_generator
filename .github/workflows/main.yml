@@ -1,10 +1,11 @@
 name: aws deployment process
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: environment
+  pull_request:
+  # workflow_dispatch:
+  #   inputs:
+  #     environment:
+  #       type: environment
 
 env:
  SAMPLE: ${{ secrets.SAMPLE }}
